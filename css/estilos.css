@@ -1,3 +1,13 @@
 .logo-nav {
   width: 50px;
 }
+@media (min-width: 768px) {
+  #features p,
+  #features li {
+    font-size: 1.25rem; /* ou 20px */
+  }
+
+  #features h5 {
+    font-size: 1.5rem; /* ou 24px */
+  }
+}
