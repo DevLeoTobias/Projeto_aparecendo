@@ -78,12 +78,12 @@
         </div>
       </div>
     </nav>
-    <!-- Mashead header-->
+    <!--  header-->
     <header class="masthead">
       <div class="container px-5">
         <div class="row gx-5 align-items-center">
           <div class="col-lg-6">
-            <!-- Mashead text and app badges-->
+            <!-- texto e botao do lado esquedo do celular-->
             <div class="mb-5 mb-lg-0 text-center text-lg-start">
               <h1
                 class="display-1 lh-1 mb-3 text-center text-uppercase fw-bold font-alt"
@@ -104,9 +104,9 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <!-- Masthead device mockup feature-->
+            <!-- fundo do celular a direita-->
             <div class="masthead-device-mockup">
-              <svg
+              <!--   <svg
                 class="circle"
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,37 +120,27 @@
                     <stop class="gradient-end-color" offset="100%"></stop>
                   </linearGradient>
                 </defs>
-                <circle cx="50" cy="50" r="50"></circle>
-              </svg>
+                <rect
+                  x="80"
+                  y="-20"
+                  width="80"
+                  height="80"
+                  rx="0"
+                  ry="0"
+                  fill="black"
+                  transform="translate(-49.88 120.42) rotate(-45)"
+                />
+              </svg> -->
               <svg
                 class="shape-1 d-none d-sm-block"
                 viewBox="0 0 240.83 240.83"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="-32.54"
-                  y="78.39"
-                  width="305.92"
-                  height="84.05"
-                  rx="42.03"
-                  transform="translate(120.42 -49.88) rotate(45)"
-                ></rect>
-                <rect
-                  x="-32.54"
-                  y="78.39"
-                  width="305.92"
-                  height="84.05"
-                  rx="42.03"
-                  transform="translate(-49.88 120.42) rotate(-45)"
-                ></rect>
-              </svg>
+              ></svg>
               <svg
                 class="shape-2 d-none d-sm-block"
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="50" cy="50" r="50"></circle>
-              </svg>
+              ></svg>
               <div class="device-wrapper">
                 <div
                   class="device"
@@ -182,7 +172,7 @@
         </div>
       </div>
     </header>
-    <!-- Quote/testimonial aside-->
+    <!-- Anunciar 1 2 3-->
     <aside class="text-center bg-gradient-primary-to-secondary py-5">
       <div class="container px-4">
         <div class="row justify-content-center">
@@ -229,6 +219,7 @@
         </div>
       </div>
     </aside>
+    <!--Como funciona-->
     <section id="como-funciona-preview" class="bg-light">
       <div class="container px-4 px-lg-5 text-center">
         <h2 class="text-center text-uppercase fw-bold font-alt p-2 mb-4">
@@ -245,14 +236,14 @@
           </strong>
         </p>
         <div class="d-flex justify-content-center mt-3">
-          <a class="btn btn-dark btn-lg" href="comoFunciona.html">
+          <a class="btn btn-white btn-animate" href="comoFunciona.html">
             Quero entender agora!
           </a>
         </div>
       </div>
     </section>
 
-    <!-- App features section-->
+    <!-- Por que Escolher-->
     <section id="features">
       <h2 class="text-center text-uppercase fw-bold font-alt p-2 mb-4">
         Por que escolher a Apparecendo.com?
@@ -312,7 +303,7 @@
             </div>
           </div>
           <div class="col-lg-4 order-lg-0">
-            <!-- Features section device mockup-->
+            <!-- secao do celular da esquerda-->
             <div class="features-device-mockup">
               <svg
                 class="circle"
@@ -328,7 +319,6 @@
                     <stop class="gradient-end-color" offset="100%"></stop>
                   </linearGradient>
                 </defs>
-                <circle cx="50" cy="50" r="50"></circle>
               </svg>
               <svg
                 class="shape-1 d-none d-sm-block"
@@ -356,9 +346,7 @@
                 class="shape-2 d-none d-sm-block"
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="50" cy="50" r="50"></circle>
-              </svg>
+              ></svg>
               <div class="device-wrapper">
                 <div
                   class="device"
@@ -398,11 +386,9 @@
       </h2>
       <div class="container planos px-2" id="planos">
         <div class="row justify-content-center g-4">
+          <!--card plano visibilidade-->
           <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div
-              class="card h-100 w-100 max-w shadow rounded-4"
-              style="min-height: 400px"
-            >
+            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
               <svg
                 aria-label="Placeholder: Image cap"
                 class="bd-placeholder-img card-img-top"
@@ -436,17 +422,18 @@
                   type="button"
                   class="btn btn-primary"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#modalPlano1"
+                  aria-label="Saiba mais sobre o Plano Visibilidade"
                 >
                   Saiba Mais
                 </button>
               </div>
             </div>
           </div>
-          <!-- modal do plano 1-->
+          <!-- modal do plano visibilidade-->
           <div
             class="modal fade"
-            id="exampleModal"
+            id="modalPlano1"
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
@@ -511,12 +498,9 @@
               </div>
             </div>
           </div>
-          <!--Plano2 / modal-->
+          <!--plano impulso-->
           <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div
-              class="card h-100 w-100 max-w shadow rounded-4"
-              style="min-height: 400px"
-            >
+            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
               <svg
                 aria-label="Placeholder: Image cap"
                 class="bd-placeholder-img card-img-top"
@@ -546,18 +530,90 @@
                     mais clientes.
                   </span>
                 </p>
-                <button class="btn btn-primary saiba-mais" id="btnSaibaMais">
-                  Saiba mais
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalPlano2"
+                  aria-label="Saiba mais sobre o Plano Impulso"
+                >
+                  Saiba Mais
                 </button>
               </div>
             </div>
           </div>
+          <!-- modal Plano Impulso  sera aqui-->
+          <div
+            class="modal fade"
+            id="modalPlano2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1
+                    class="modal-title fs-5 text-center fw-bold text-uppercase"
+                    id="exampleModalLabel"
+                  >
+                    Plano Impulso
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body p-3 fs-5">
+                  <p>
+                    Ideal para pequenos negócios que querem dar os primeiros
+                    passos no marketing digital de forma prática e acessível!
+                    Com o Plano Visibilidade, seu negócio aparecerá nas
+                    principais redes sociais sem complicações e com resultados
+                    rápidos.
+                  </p>
+                  <hr />
+                  <div class="p-3 fs-5">
+                    <span>Inclui:</span>
+                    <ul>
+                      <li>Anúncios no Facebook e Instagram</li>
+                      <li>
+                        Aproximadamente 15 posicionamentos (Feed, Stories e
+                        mais)
+                      </li>
+                      <li>Divulgação através dos canais da Apparecendo.com</li>
+                      <li>Gerenciamento completo dos anúncios</li>
+                      <li>anding page personalizada com seu subdomínio</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="p-3 fs-3">
+                    <span>Investimento: </span>
+                    <p>R$400/mês no plano trimestral</p>
+                    <p>R$500/mês no plano mensal</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary gap-3"
+                    data-bs-dismiss="modal"
+                  >
+                    fechar
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Quero Começar a Aparecer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!--card Plano personalizado-->
           <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div
-              class="card h-100 w-100 max-w shadow rounded-4"
-              style="min-height: 400px"
-            >
+            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
               <svg
                 aria-label="Placeholder: Image cap"
                 class="bd-placeholder-img card-img-top"
@@ -588,31 +644,109 @@
                     crescimento.
                   </span>
                 </p>
-                <button class="btn btn-primary saiba-mais">Saiba mais</button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalPlano3"
+                  aria-label="Saiba mais sobre o Plano Personalizado"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- modal plano Personalizado  sera aqui-->
+          <div
+            class="modal fade"
+            id="modalPlano3"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1
+                    class="modal-title fs-5 text-center fw-bold text-uppercase"
+                    id="exampleModalLabel"
+                  >
+                    Plano Personalizado
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body p-3 fs-5">
+                  <p>
+                    Ideal para pequenos negócios que querem dar os primeiros
+                    passos no marketing digital de forma prática e acessível!
+                    Com o Plano Visibilidade, seu negócio aparecerá nas
+                    principais redes sociais sem complicações e com resultados
+                    rápidos.
+                  </p>
+                  <hr />
+                  <div class="p-3 fs-5">
+                    <span>Inclui:</span>
+                    <ul>
+                      <li>Anúncios no Facebook e Instagram</li>
+                      <li>
+                        Aproximadamente 15 posicionamentos (Feed, Stories e
+                        mais)
+                      </li>
+                      <li>Divulgação através dos canais da Apparecendo.com</li>
+                      <li>Gerenciamento completo dos anúncios</li>
+                      <li>Landing page personalizada com seu subdomínio</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="p-3 fs-3">
+                    <span>Investimento: </span>
+                    <p>R$400/mês no plano trimestral</p>
+                    <p>R$500/mês no plano mensal</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary gap-3"
+                    data-bs-dismiss="modal"
+                  >
+                    fechar
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Quero Começar a Aparecer
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!--texto abaixo do plano-->
       <div class="planos-inclui container planos px-2 mt-5">
         <h2 class="text-center text-uppercase fw-bold font-alt p-2 mb-4">
           Todos os planos incluem
         </h2>
-        <div class="d-flex justify-content-around">
-          <p>
-            Relatórios mensais simples e claros
-            <i class="bi bi-graph-up-arrow"></i>
-          </p>
-          <p>
-            Suporte rápido via WhatsApp
-            <i class="bi bi-whatsapp"></i>
-          </p>
-          <p>
-            Possibilidade de upgrade a qualquer momento
-            <i class="bi bi-rocket-takeoff"></i>
-          </p>
-        </div>
+
+        <ul class="row list-unstyled text-center">
+          <li class="col-12 col-md-4 mb-3">
+            <i class="bi bi-graph-up-arrow fs-3 d-block mb-2 text-primary"></i>
+            <span class="fw-semibold">Relatórios mensais simples e claros</span>
+          </li>
+          <li class="col-12 col-md-4 mb-3">
+            <i class="bi bi-whatsapp fs-3 d-block mb-2 text-success"></i>
+            <span class="fw-semibold">Suporte rápido via WhatsApp</span>
+          </li>
+          <li class="col-12 col-md-4 mb-3">
+            <i class="bi bi-rocket-takeoff fs-3 d-block mb-2 text-danger"></i>
+            <span class="fw-semibold">Upgrade a qualquer momento</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -626,7 +760,7 @@
         </div>
       </div>
     </section>
-    <!-- App badge section-->
+    <!-- contato-->
     <section class="bg-gradient-primary-to-secondary" id="download">
       <div class="container px-5">
         <h2 class="text-center text-white font-alt mb-4">
@@ -649,145 +783,10 @@
         </div>
       </div>
     </footer>
-    <!-- Feedback Modal-->
-    <div
-      class="modal fade"
-      id="feedbackModal"
-      tabindex="-1"
-      aria-labelledby="feedbackModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-gradient-primary-to-secondary p-4">
-            <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">
-              Send feedback
-            </h5>
-            <button
-              class="btn-close btn-close-white"
-              type="button"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body border-0 p-4">
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- * * SB Forms Contact Form * *-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- This form is pre-integrated with SB Forms.-->
-            <!-- To make this form functional, sign up at-->
-            <!-- https://startbootstrap.com/solution/contact-forms-->
-            <!-- to get an API token!-->
-            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-              <!-- Name input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name..."
-                  data-sb-validations="required"
-                />
-                <label for="name">Full name</label>
-                <div class="invalid-feedback" data-sb-feedback="name:required">
-                  A name is required.
-                </div>
-              </div>
-              <!-- Email address input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="email"
-                  type="email"
-                  placeholder="name@example.com"
-                  data-sb-validations="required,email"
-                />
-                <label for="email">Email address</label>
-                <div class="invalid-feedback" data-sb-feedback="email:required">
-                  An email is required.
-                </div>
-                <div class="invalid-feedback" data-sb-feedback="email:email">
-                  Email is not valid.
-                </div>
-              </div>
-              <!-- Phone number input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="phone"
-                  type="tel"
-                  placeholder="(123) 456-7890"
-                  data-sb-validations="required"
-                />
-                <label for="phone">Phone number</label>
-                <div class="invalid-feedback" data-sb-feedback="phone:required">
-                  A phone number is required.
-                </div>
-              </div>
-              <!-- Message input-->
-              <div class="form-floating mb-3">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  type="text"
-                  placeholder="Enter your message here..."
-                  style="height: 10rem"
-                  data-sb-validations="required"
-                ></textarea>
-                <label for="message">Message</label>
-                <div
-                  class="invalid-feedback"
-                  data-sb-feedback="message:required"
-                >
-                  A message is required.
-                </div>
-              </div>
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
-              <div class="d-none" id="submitSuccessMessage">
-                <div class="text-center mb-3">
-                  <div class="fw-bolder">Form submission successful!</div>
-                  To activate this form, sign up at
-                  <br />
-                  <a href="https://startbootstrap.com/solution/contact-forms"
-                    >https://startbootstrap.com/solution/contact-forms</a
-                  >
-                </div>
-              </div>
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
-                <div class="text-center text-danger mb-3">
-                  Error sending message!
-                </div>
-              </div>
-              <!-- Submit Button-->
-              <div class="d-grid">
-                <button
-                  class="btn btn-primary rounded-pill btn-lg disabled"
-                  id="submitButton"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
