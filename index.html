@@ -439,352 +439,244 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </section>
 
     <!-- planos -->
-    <section class="bg-light">
-      <h2 class="text-center text-uppercase fw-bold font-alt p-2 mb-4">
-        escolha o plano ideal para o seu negócio
-      </h2>
-      <div class="container planos px-2" id="planos">
-        <div class="row justify-content-center g-4">
-          <!--card plano visibilidade-->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
-              <svg
-                aria-label="Placeholder: Image cap"
-                class="bd-placeholder-img card-img-top"
-                height="180"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="100%"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#868e96"></rect>
-                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-              </svg>
-              <div class="card-body">
-                <h2 class="card-title text-truncate w-100">
-                  Plano Visibilidade
-                </h2>
-                <p class="card-text">
-                  <span class="descricao-curta">
-                    Ideal para pequenos negócios que querem dar os primeiros
-                    passos no marketing digital de forma prática e acessível!
-                  </span>
-                  <span class="descricao-completa d-none">
-                    <br />Com o Plano Visibilidade, seu negócio aparecerá nas
-                    principais redes sociais sem complicações e com resultados
-                    rápidos.
-                  </span>
-                </p>
-                <!-- Button trigger modal -->
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalPlano1"
-                  aria-label="Saiba mais sobre o Plano Visibilidade"
-                >
-                  Saiba Mais
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- modal do plano visibilidade-->
-          <div
-            class="modal fade"
-            id="modalPlano1"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1
-                    class="modal-title fs-5 text-center fw-bold text-uppercase"
-                    id="exampleModalLabel"
-                  >
-                    Plano Visibilidade
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
+   <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center text-uppercase fw-bold font-alt mb-5">
+                Escolha o Plano Ideal para o Seu Negócio
+            </h2>
+            
+            <div class="row justify-content-center g-4" id="planos">
+                <!-- Plano Básico -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card plano-card h-100 shadow rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="card-title fw-bold mb-3">Plano Visibilidade</h3>
+                            <div class="mb-3">
+                                <div class="preco">R$ 400<span class="fs-6">/mês</span></div>
+                                <div class="preco-pequeno">R$ 500/mês no mensal</div>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Ideal para pequenos negócios que querem dar os primeiros passos no marketing digital
+                            </p>
+                            <ul class="lista-beneficios mb-4">
+                                <li><i class="fas fa-check"></i> Anúncios Facebook/Instagram</li>
+                                <li><i class="fas fa-check"></i> 15 posicionamentos</li>
+                                <li><i class="fas fa-check"></i> Landing page personalizada</li>
+                                <li><i class="fas fa-check"></i> Gerenciamento completo</li>
+                            </ul>
+                            <button class="btn btn-outline-primary btn-plano w-100" 
+                                    data-bs-toggle="modal" data-bs-target="#modalPlano1">
+                                Saiba Mais
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body p-3 fs-5">
-                  <p>
-                    Ideal para pequenos negócios que querem dar os primeiros
-                    passos no marketing digital de forma prática e acessível!
-                    Com o Plano Visibilidade, seu negócio aparecerá nas
-                    principais redes sociais sem complicações e com resultados
-                    rápidos.
-                  </p>
-                  <hr />
-                  <div class="p-3 fs-5">
-                    <span>Inclui:</span>
-                    <ul>
-                      <li>Anúncios no Facebook e Instagram</li>
-                      <li>
-                        Aproximadamente 15 posicionamentos (Feed, Stories e
-                        mais)
-                      </li>
-                      <li>Divulgação através dos canais da Apparecendo.com</li>
-                      <li>Gerenciamento completo dos anúncios</li>
-                      <li>anding page personalizada com seu subdomínio</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <div class="p-3 fs-3">
-                    <span>Investimento: </span>
-                    <p>R$400/mês no plano trimestral</p>
-                    <p>R$500/mês no plano mensal</p>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary gap-3"
-                    data-bs-dismiss="modal"
-                  >
-                    fechar
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Quero Começar a Aparecer
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--plano impulso-->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
-              <svg
-                aria-label="Placeholder: Image cap"
-                class="bd-placeholder-img card-img-top"
-                height="180"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="100%"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#868e96"></rect>
-                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-              </svg>
 
-              <div class="card-body p-3">
-                <h2 class="card-title text-truncate w-100">
-                  Plano Impulso - Expanda Seu Alcance
-                </h2>
-                <p class="card-text p-3">
-                  <span class="descricao-curta">
-                    Para quem quer ir além das redes sociais!
-                  </span>
-                  <span class="descricao-completa d-none">
-                    <br />O Plano Impulso é indicado para prestadores de serviço
-                    e empresas que querem aparecer tanto nas redes sociais
-                    quanto nos resultados de busca do Google, conquistando ainda
-                    mais clientes.
-                  </span>
-                </p>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalPlano2"
-                  aria-label="Saiba mais sobre o Plano Impulso"
-                >
-                  Saiba Mais
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- modal Plano Impulso  sera aqui-->
-          <div
-            class="modal fade"
-            id="modalPlano2"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1
-                    class="modal-title fs-5 text-center fw-bold text-uppercase"
-                    id="exampleModalLabel"
-                  >
-                    Plano Impulso
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
+                <!-- Plano Impulso - DESTAQUE -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card plano-card plano-destaque h-100 shadow rounded-4">
+                        <div class="badge-destaque">
+                            <i class="fas fa-star"></i> MAIS POPULAR
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="card-title fw-bold mb-3">Plano Impulso</h3>
+                            <div class="mb-3">
+                                <div class="preco">R$ 750<span class="fs-6">/mês</span></div>
+                                <div class="preco-pequeno">R$ 900/mês no mensal</div>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Para quem quer ir além das redes sociais e aparecer no Google
+                            </p>
+                            <ul class="lista-beneficios mb-4">
+                                <li><i class="fas fa-check"></i> Tudo do Plano Visibilidade</li>
+                                <li><i class="fas fa-check"></i> Google Ads</li>
+                                <li><i class="fas fa-check"></i> SEO Local</li>
+                                <li><i class="fas fa-check"></i> Relatórios detalhados</li>
+                                <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                            </ul>
+                            <button class="btn btn-primary btn-plano w-100" 
+                                    data-bs-toggle="modal" data-bs-target="#modalPlano2">
+                                Começar Agora
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body p-3 fs-5">
-                  <p>
-                    Ideal para pequenos negócios que querem dar os primeiros
-                    passos no marketing digital de forma prática e acessível!
-                    Com o Plano Visibilidade, seu negócio aparecerá nas
-                    principais redes sociais sem complicações e com resultados
-                    rápidos.
-                  </p>
-                  <hr />
-                  <div class="p-3 fs-5">
-                    <span>Inclui:</span>
-                    <ul>
-                      <li>Anúncios no Facebook e Instagram</li>
-                      <li>
-                        Aproximadamente 15 posicionamentos (Feed, Stories e
-                        mais)
-                      </li>
-                      <li>Divulgação através dos canais da Apparecendo.com</li>
-                      <li>Gerenciamento completo dos anúncios</li>
-                      <li>anding page personalizada com seu subdomínio</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <div class="p-3 fs-3">
-                    <span>Investimento: </span>
-                    <p>R$400/mês no plano trimestral</p>
-                    <p>R$500/mês no plano mensal</p>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary gap-3"
-                    data-bs-dismiss="modal"
-                  >
-                    fechar
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Quero Começar a Aparecer
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!--card Plano personalizado-->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card plano-card h-100 w-100 max-w shadow rounded-4">
-              <svg
-                aria-label="Placeholder: Image cap"
-                class="bd-placeholder-img card-img-top"
-                height="180"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="100%"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#868e96"></rect>
-                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
-                  uma imagem sobre o plano
-                </text>
-              </svg>
-              <div class="card-body">
-                <h2 class="card-title text-truncate w-100">
-                  Plano Personalizado - Estratégia Exclusiva para Seu Negócio
-                </h2>
-                <p class="card-text">
-                  <span class="descricao-curta">
-                    Quer uma estratégia 100% voltada para o seu negócio?
-                  </span>
-                  <span class="descricao-completa d-none">
-                    <br />No Plano Personalizado, criamos toda a estrutura de
-                    anúncios e gerenciamos diretamente usando o seu perfil e sua
-                    conta de anúncios, proporcionando ainda mais autonomia e
-                    crescimento.
-                  </span>
-                </p>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalPlano3"
-                  aria-label="Saiba mais sobre o Plano Personalizado"
-                >
-                  Saiba Mais
-                </button>
-              </div>
+                <!-- Plano Personalizado -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card plano-card h-100 shadow rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="card-title fw-bold mb-3">Plano Personalizado</h3>
+                            <div class="mb-3">
+                                <div class="preco">R$ 1.200<span class="fs-6">/mês</span></div>
+                                <div class="preco-pequeno">Sob consulta</div>
+                            </div>
+                            <p class="text-muted mb-4">
+                                Estratégia 100% voltada para o seu negócio com máxima autonomia
+                            </p>
+                            <ul class="lista-beneficios mb-4">
+                                <li><i class="fas fa-check"></i> Estratégia exclusiva</li>
+                                <li><i class="fas fa-check"></i> Múltiplas plataformas</li>
+                                <li><i class="fas fa-check"></i> Sua conta de anúncios</li>
+                                <li><i class="fas fa-check"></i> Consultoria mensal</li>
+                                <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                            </ul>
+                            <button class="btn btn-outline-primary btn-plano w-100" 
+                                    data-bs-toggle="modal" data-bs-target="#modalPlano3">
+                                Saiba Mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- modal plano Personalizado  sera aqui-->
-          <div
-            class="modal fade"
-            id="modalPlano3"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1
-                    class="modal-title fs-5 text-center fw-bold text-uppercase"
-                    id="exampleModalLabel"
-                  >
-                    Plano Personalizado
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body p-3 fs-5">
-                  <p>
-                    Ideal para pequenos negócios que querem dar os primeiros
-                    passos no marketing digital de forma prática e acessível!
-                    Com o Plano Visibilidade, seu negócio aparecerá nas
-                    principais redes sociais sem complicações e com resultados
-                    rápidos.
-                  </p>
-                  <hr />
-                  <div class="p-3 fs-5">
-                    <span>Inclui:</span>
-                    <ul>
-                      <li>Anúncios no Facebook e Instagram</li>
-                      <li>
-                        Aproximadamente 15 posicionamentos (Feed, Stories e
-                        mais)
-                      </li>
-                      <li>Divulgação através dos canais da Apparecendo.com</li>
-                      <li>Gerenciamento completo dos anúncios</li>
-                      <li>Landing page personalizada com seu subdomínio</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <div class="p-3 fs-3">
-                    <span>Investimento: </span>
-                    <p>R$400/mês no plano trimestral</p>
-                    <p>R$500/mês no plano mensal</p>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary gap-3"
-                    data-bs-dismiss="modal"
-                  >
-                    fechar
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Quero Começar a Aparecer
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Modal Plano Visibilidade -->
+    <div class="modal fade" id="modalPlano1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">
+                        <i class="fas fa-eye me-2"></i>Plano Visibilidade
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">
+                        Ideal para pequenos negócios que querem dar os primeiros passos no marketing digital 
+                        de forma prática e acessível!
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4 mb-3">O que está incluído:</h6>
+                    <ul class="lista-beneficios">
+                        <li><i class="fas fa-check"></i> Anúncios no Facebook e Instagram</li>
+                        <li><i class="fas fa-check"></i> Aproximadamente 15 posicionamentos (Feed, Stories e mais)</li>
+                        <li><i class="fas fa-check"></i> Divulgação através dos canais da Apparecendo.com</li>
+                        <li><i class="fas fa-check"></i> Gerenciamento completo dos anúncios</li>
+                        <li><i class="fas fa-check"></i> Landing page personalizada com seu subdomínio</li>
+                    </ul>
+                    
+                    <div class="bg-light p-3 rounded-3 mt-4">
+                        <h6 class="fw-bold">Investimento:</h6>
+                        <p class="mb-1"><strong>R$ 400/mês</strong> no plano trimestral</p>
+                        <p class="mb-0">R$ 500/mês no plano mensal</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-rocket me-2"></i>Quero Começar a Aparecer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Plano Impulso -->
+    <div class="modal fade" id="modalPlano2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">
+                        <i class="fas fa-rocket me-2"></i>Plano Impulso - Mais Popular
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fas fa-star me-2"></i><strong>Plano mais escolhido!</strong> 
+                        Ideal para quem quer resultados mais rápidos e abrangentes.
+                    </div>
+                    
+                    <p class="lead">
+                        Para empresas que querem ir além das redes sociais e aparecer tanto no Facebook/Instagram 
+                        quanto nos resultados de busca do Google.
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4 mb-3">O que está incluído:</h6>
+                    <ul class="lista-beneficios">
+                        <li><i class="fas fa-check"></i> Tudo do Plano Visibilidade</li>
+                        <li><i class="fas fa-check"></i> Anúncios no Google Ads</li>
+                        <li><i class="fas fa-check"></i> Otimização para SEO Local</li>
+                        <li><i class="fas fa-check"></i> Relatórios mensais detalhados</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                        <li><i class="fas fa-check"></i> Ajustes de estratégia em tempo real</li>
+                    </ul>
+                    
+                    <div class="bg-light p-3 rounded-3 mt-4">
+                        <h6 class="fw-bold">Investimento:</h6>
+                        <p class="mb-1"><strong>R$ 750/mês</strong> no plano trimestral</p>
+                        <p class="mb-0">R$ 900/mês no plano mensal</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-rocket me-2"></i>Quero Este Plano
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Plano Personalizado -->
+    <div class="modal fade" id="modalPlano3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">
+                        <i class="fas fa-crown me-2"></i>Plano Personalizado
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">
+                        Quer uma estratégia 100% voltada para o seu negócio? No Plano Personalizado, 
+                        criamos toda a estrutura usando sua própria conta de anúncios.
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4 mb-3">O que está incluído:</h6>
+                    <ul class="lista-beneficios">
+                        <li><i class="fas fa-check"></i> Estratégia de marketing exclusiva</li>
+                        <li><i class="fas fa-check"></i> Anúncios em múltiplas plataformas</li>
+                        <li><i class="fas fa-check"></i> Gestão da sua própria conta de anúncios</li>
+                        <li><i class="fas fa-check"></i> Consultoria mensal presencial/online</li>
+                        <li><i class="fas fa-check"></i> Relatórios executivos semanais</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7 via WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Criação de materiais exclusivos</li>
+                    </ul>
+                    
+                    <div class="bg-light p-3 rounded-3 mt-4">
+                        <h6 class="fw-bold">Investimento:</h6>
+                        <p class="mb-1"><strong>A partir de R$ 1.200/mês</strong></p>
+                        <p class="mb-0 text-muted">Valor final sob consulta baseado nas necessidades específicas</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-comments me-2"></i>Solicitar Consultoria
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <!--texto abaixo do plano-->
       <div class="planos-inclui container planos px-2 mt-5">
@@ -810,14 +702,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </section>
 
     <!-- clientes e feedback -->
-    <section class="cta">
-      <div class="cta-content">
-        <div class="container px-5">
-          <h2 class="text-white display-1 lh-1 mb-4 text-center">
-            clientes e feedback
-          </h2>
+   <section class="cta">
+        <div class="cta-content">
+            <div class="container px-5">
+                <h2 class="text-white display-1 lh-1 mb-4 text-center">
+                    Clientes e Feedback
+                </h2>
+                
+                <div class="row g-4 mt-5">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" 
+                                         alt="João Silva" class="rounded-circle" width="80" height="80">
+                                </div>
+                                <h5 class="card-title">João Silva</h5>
+                                <p class="text-muted small">CEO - TechStart</p>
+                                <div class="mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                </div>
+                                <p class="card-text">"Excelente trabalho! A equipe entregou exatamente o que precisávamos, no prazo e com qualidade excepcional. Recomendo fortemente."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b55c?w=80&h=80&fit=crop&crop=face" 
+                                         alt="Maria Santos" class="rounded-circle" width="80" height="80">
+                                </div>
+                                <h5 class="card-title">Maria Santos</h5>
+                                <p class="text-muted small">Diretora - InovaCorp</p>
+                                <div class="mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                </div>
+                                <p class="card-text">"Profissionalismo do início ao fim. O projeto superou nossas expectativas e o suporte pós-entrega foi fantástico."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" 
+                                         alt="Pedro Oliveira" class="rounded-circle" width="80" height="80">
+                                </div>
+                                <h5 class="card-title">Pedro Oliveira</h5>
+                                <p class="text-muted small">Fundador - StartupXYZ</p>
+                                <div class="mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                </div>
+                                <p class="card-text">"Comunicação clara, preços justos e resultado impecável. Já estamos planejando o próximo projeto com eles."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     <!-- contato-->
     <section class="bg-gradient-primary-to-secondary" id="download">
