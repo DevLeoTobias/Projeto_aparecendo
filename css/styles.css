@@ -11714,7 +11714,7 @@ footer a:focus {
         .preco-pequeno {
             font-size: 0.9rem;
             color: #6c757d;
-            text-decoration: line-through;
+            text-decoration: none;
         }
         
         .lista-beneficios {
