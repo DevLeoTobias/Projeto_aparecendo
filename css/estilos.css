@@ -11,3 +11,259 @@
     font-size: 1.5rem; /* ou 24px */
   }
 }
+/* feedback img */
+.img-profile {
+    width: 300px !important;
+    height: 120px !important;
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+}
+
+/* MEU CSS */
+.secao2-anuncio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.circle-anuncio {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* Espaço entre o círculo e o texto */
+}
+.label {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+.navbar-collapse ul li a {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.logo-nav {
+  width: 10rem;
+}
+.logo-nav {
+  width: 120px; /* Mobile padrão */
+}
+
+@media (min-width: 992px) {
+  /* lg = desktop */
+  .logo-nav {
+    width: 20rem;
+  }
+}
+/*css do botao */
+#btnComecar {
+  height: 5rem;
+  width: 15rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #040270;
+  color: #fff;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1) scaleY(1.4);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (min-width: 992px) {
+  .max-w {
+    max-width: 420px;
+  }
+}
+/*modal footer*/
+.modal-footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*modal header*/
+.modal-header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+/* css como funciona */
+@media (min-width: 768px) {
+  #features p,
+  #features li {
+    font-size: 1.65rem; /* ou 20px */
+  }
+
+  #features h5 {
+    font-size: 2.5rem; /* ou 24px */
+  }
+}
+
+
+/* cards planos */
+ .plano-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plano-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+        }
+        
+        .plano-destaque {
+            border: 3px solid #0d6efd !important;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.2) !important;
+        }
+        
+        .badge-destaque {
+            position: absolute;
+            top: -8px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #0d6efd, #6610f2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .plano-destaque .card-icon {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+        }
+        
+        .preco {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        
+        .plano-destaque .preco {
+            color: #ff6b35;
+        }
+        
+        .preco-pequeno {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .lista-beneficios {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .lista-beneficios li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        
+        .lista-beneficios li:last-child {
+            border-bottom: none;
+        }
+        
+        .lista-beneficios li i {
+            color: #28a745;
+            margin-right: 0.5rem;
+        }
+        
+        .btn-plano {
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-plano:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .modal-header {
+            background: linear-gradient(45deg, #0d6efd, #6610f2);
+            color: white;
+        }
+        
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+
