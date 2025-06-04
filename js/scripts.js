@@ -1,8 +1,7 @@
 
 
 window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
+// Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -11,7 +10,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+// Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -24,8 +23,8 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+//btn top
     const btnTopo = document.getElementById('btnTopo');
-
   window.onscroll = function() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       btnTopo.style.display = "block";
@@ -33,11 +32,9 @@ window.addEventListener('DOMContentLoaded', event => {
       btnTopo.style.display = "none";
     }
   };
-
   btnTopo.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
 });
 
  //btn quero aparecer
