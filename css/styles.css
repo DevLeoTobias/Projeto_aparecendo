@@ -8606,6 +8606,12 @@ fieldset:disabled .btn {
 .rounded-circle {
   border-radius: 50% !important;
 }
+/* feedback img */
+.img-profile {
+    width: 300px !important;
+    height: 120px !important;
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+}
 
 .rounded-pill {
   border-radius: var(--bs-border-radius-pill) !important;
