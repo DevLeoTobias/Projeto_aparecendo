@@ -1,94 +1,189 @@
-
-
-window.addEventListener('DOMContentLoaded', event => {
-// Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
-
-// Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+document.addEventListener('DOMContentLoaded', () => {
+  // ScrollSpy do Bootstrap
+  const mainNav = document.querySelector('#mainNav');
+  if (mainNav) {
+    new bootstrap.ScrollSpy(document.body, {
+      target: '#mainNav',
+      offset: 74,
     });
+  }
 
-//btn top
-    const btnTopo = document.getElementById('btnTopo');
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btnTopo.style.display = "block";
+  // Fecha o menu no mobile após clicar
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const responsiveNavItems = document.querySelectorAll('#navbarResponsive .nav-link');
+  responsiveNavItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (window.getComputedStyle(navbarToggler).display !== 'none') {
+        navbarToggler.click();
+      }
+    });
+  });
+
+  // Botão "Voltar ao topo"
+  const btnTopo = document.getElementById('btnTopo');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      btnTopo.style.display = 'block';
     } else {
-      btnTopo.style.display = "none";
+      btnTopo.style.display = 'none';
     }
-  };
+  });
+
   btnTopo.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-});
 
- //btn quero aparecer
-const botaoComecar = document.getElementById('btnComecar');
-botaoComecar.addEventListener('click', () => {
-  document.getElementById('btnComecar').addEventListener('click', function () {
-  document.querySelector('#planos').scrollIntoView({ behavior: 'smooth' });  
-  botaoComecar.textContent = 'Aparecendo...';
-        
+  // Botão "Quero aparecer"
+  const botaoComecar = document.getElementById('btnComecar');
+  botaoComecar.addEventListener('click', () => {
+    document.querySelector('#planos').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Contador de cliques
+  let contador = 0;
+  botaoComecar.addEventListener('click', () => {
+    contador++;
+    console.log(`Botão clicado ${contador}x`);
+  });
+
+  // Animação dos cards
+  const cards = document.querySelectorAll('.plano-card');
+  cards.forEach((card) => {
+    card.addEventListener('mouseover', () => {
+      card.style.borderColor = 'red';
     });
+    card.addEventListener('mouseout', () => {
+      card.style.borderColor = 'transparent';
+    });
+  });
+  
 });
 
-//contador de cliques do botao
-        let contador = 0;
-            botaoComecar.addEventListener('click', () => {
-            contador++;
-            console.log(`Botão clicado ${contador}x`);            
+
+
+ // Objeto para armazenar as seleções
+        let planosData = {
+            visibilidade: {
+                selecionado: false,
+                periodo: 'trimestral',
+                valor: 400,
+                valorTotal: 1200
+            },
+            impulso: {
+                selecionado: false,
+                periodo: 'trimestral',
+                valor: 700,
+                valorTotal: 2100
+            }
+        };
+
+        // Função para inicializar os eventos
+        document.addEventListener('DOMContentLoaded', function() {
+            initializePricingOptions();
         });
 
-//animacao do cards de planos
-const cards = document.querySelectorAll('.plano-card');
+        function initializePricingOptions() {
+            // Adicionar eventos para todas as opções de preço
+            document.querySelectorAll('.opcao-preco').forEach(opcao => {
+                opcao.addEventListener('click', function() {
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                    
+                    // Remover seleção visual de outras opções do mesmo grupo
+                    const groupName = radio.name;
+                    document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                        r.closest('.opcao-preco').classList.remove('selecionada');
+                    });
+                    
+                    // Adicionar seleção visual na opção atual
+                    this.classList.add('selecionada');
+                    
+                    // Atualizar dados do plano
+                    const plano = this.dataset.plano;
+                    const periodo = this.dataset.periodo;
+                    const valor = parseInt(this.dataset.valor);
+                    
+                    planosData[plano].periodo = periodo;
+                    planosData[plano].valor = valor;
+                    planosData[plano].valorTotal = periodo === 'trimestral' ? valor * 3 : valor;
+                    
+                    console.log('Plano atualizado:', planosData[plano]);
+                });
+            });
 
-cards.forEach((card) => {
-  card.addEventListener('mouseover', () => {
-    card.style.borderColor = 'red';
-  });
-  card.addEventListener('mouseout', () => {
-    card.style.borderColor = 'transparent';
-  });
-});
+            // Marcar opções padrão como selecionadas visualmente
+            document.querySelectorAll('input[type="radio"]:checked').forEach(radio => {
+                radio.closest('.opcao-preco').classList.add('selecionada');
+            });
+        }
 
-/* //Guardar a escolha de plano no localStorage
-const botoesPlano = document.querySelectorAll('.btn-plano');
+        function processarPagamento(plano) {
+            // Pegar a opção selecionada
+            const radioSelecionado = document.querySelector(`input[name="preco-${plano}"]:checked`);
+            
+            if (!radioSelecionado) {
+                alert('Por favor, selecione uma opção de pagamento.');
+                return;
+            }
 
-botoesPlano.forEach((botao) => {
-  botao.addEventListener('click', () => {
-    const nomePlano = botao.closest('.plano-card').querySelector('h3').textContent;
-    localStorage.setItem('planoEscolhido', nomePlano);
-    console.log(`Plano salvo: ${nomePlano}`);
-    
-  });
-}); */
+            const opcaoSelecionada = radioSelecionado.closest('.opcao-preco');
+            const dadosPlano = {
+                nome: plano,
+                periodo: opcaoSelecionada.dataset.periodo,
+                valorMensal: parseInt(opcaoSelecionada.dataset.valor),
+                valorTotal: opcaoSelecionada.dataset.periodo === 'trimestral' ? 
+                    parseInt(opcaoSelecionada.dataset.valor) * 3 : 
+                    parseInt(opcaoSelecionada.dataset.valor)
+            };
 
-//btn para voltar ao top
-const btnTopo = document.getElementById('btnTopo');
+            // Aqui você pode integrar com sua API de pagamento
+            console.log('Processando pagamento:', dadosPlano);
+            
+            // Exemplo de integração (substitua pela sua lógica)
+            processarPagamentoAPI(dadosPlano);
+        }
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btnTopo.style.display = "block";
-  } else {
-    btnTopo.style.display = "none";
-  }
-};
+        function processarPagamentoAPI(dadosPlano) {
+            // Simular processamento
+             
+                    let urlPagamento;
 
-btnTopo.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+                    if (dadosPlano.nome === 'visibilidade') {
+                        urlPagamento = dadosPlano.periodo === 'mensal' 
+                            ? "https://pagamento.infinitepay.io/link-vis-mensal"
+                            : "https://pagamento.infinitepay.io/link-vis-tri";
+                    } else if (dadosPlano.nome === 'impulso') {
+                        urlPagamento = dadosPlano.periodo === 'mensal' 
+                            ? "https://pagamento.infinitepay.io/link-impulso-mensal"
+                            : "https://pagamento.infinitepay.io/link-impulso-tri";
+                    }
+
+                        // Redirecionar o cliente
+                        window.location.href = urlPagamento;
+}
+
+
+        function solicitarConsultoria() {
+            // Lógica para solicitar consultoria do plano personalizado
+            console.log('Solicitando consultoria...');
+            alert('Em breve entraremos em contato para uma consultoria personalizada!');
+            
+            // Aqui você pode integrar com um formulário ou CRM
+            /*
+            fetch('/api/solicitar-consultoria', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    plano: 'personalizado',
+                    timestamp: new Date().toISOString()
+                })
+            });
+            */
+        }
+
+        // Função para obter dados atuais dos planos (útil para debugging)
+        function obterDadosPlanos() {
+            return planosData;
+        }

@@ -160,69 +160,68 @@
 
 
 /* cards planos */
- .plano-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+  .plano-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
             position: relative;
-            overflow: hidden;
         }
         
         .plano-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
         }
         
         .plano-destaque {
-            border: 3px solid #0d6efd !important;
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.2) !important;
+            border: 3px solid #007bff !important;
+            position: relative;
         }
         
         .badge-destaque {
             position: absolute;
-            top: -8px;
-            right: 15px;
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #007bff, #0056b3);
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
-            font-size: 0.85rem;
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         }
         
         .card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #0d6efd, #6610f2);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            color: white;
-            font-size: 1.5rem;
         }
         
-        .plano-destaque .card-icon {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
+        .card-icon i {
+            font-size: 2rem;
+            color: white;
         }
         
         .preco {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #0d6efd;
+            color: #007bff;
+            line-height: 1;
         }
         
-        .plano-destaque .preco {
-            color: #ff6b35;
+        .preco span {
+            font-size: 1rem;
+            color: #6c757d;
         }
         
         .preco-pequeno {
             font-size: 0.9rem;
-            color: #6c757d;
-            text-decoration: none;
+            color: #28a745;
+            font-weight: 600;
         }
         
         .lista-beneficios {
@@ -231,39 +230,87 @@
         }
         
         .lista-beneficios li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f1f3f4;
+            padding: 8px 0;
+            border-bottom: 1px solid #f8f9fa;
         }
         
         .lista-beneficios li:last-child {
             border-bottom: none;
         }
         
-        .lista-beneficios li i {
+        .lista-beneficios i {
             color: #28a745;
-            margin-right: 0.5rem;
+            margin-right: 10px;
         }
         
         .btn-plano {
-            border-radius: 25px;
             padding: 12px 30px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
         }
         
-        .btn-plano:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        .opcoes-preco {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
         }
         
-        .modal-header {
-            background: linear-gradient(45deg, #0d6efd, #6610f2);
+        .opcao-preco {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .opcao-preco:hover {
+            border-color: #007bff;
+        }
+        
+        .opcao-preco.selecionada {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+        
+        .opcao-preco input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.2);
+        }
+        
+        .economia-badge {
+            background: #28a745;
             color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
         
-        .modal-header .btn-close {
-            filter: invert(1);
+        .preco-modal {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #007bff;
         }
-
+        
+        .btn-pagamento {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-pagamento:hover {
+            background: linear-gradient(45deg, #20c997, #28a745);
+            transform: translateY(-2px);
+        }
