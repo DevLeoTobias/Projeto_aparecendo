@@ -1,0 +1,25 @@
+{
+  "name": "projeto_aparecendo",
+  "version": "1.0.0",
+  "description": "Website institucional desenvolvido para o cliente **Aparecendo.com**, com o objetivo de estabelecer uma presença digital sólida, apresentar serviços com clareza e garantir uma navegação fluida e responsiva.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLeoTobias/Projeto_aparecendo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevLeoTobias/Projeto_aparecendo/issues"
+  },
+  "homepage": "https://github.com/DevLeoTobias/Projeto_aparecendo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

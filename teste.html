@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Testar Link de Pagamento</title>
+</head>
+<body>
+  <button onclick="gerarLink()">Gerar Link Seguro</button>
+
+  <script>
+    function gerarLink() {
+      fetch('http://localhost:3000/gerar-link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          plano: 'impulso',
+          periodo: 'mensal'
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.sucesso) {
+            window.location.href = data.linkSeguro; // aqui, linkSeguro, não link
+        } else {
+            alert('Erro: ' + data.erro);
+        }
+        })
+      .catch(err => alert('Falha na conexão'));
+    }
+  </script>
+</body>
+</html>
